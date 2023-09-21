@@ -4,9 +4,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 SECRET_KEY = 'django-insecure-j_89af+30&&4qm*8z9_(^zz8p4-ho8z_m6ylm0s$h!-p@on1_^'
+
 DEBUG = False
 
-ALLOWED_HOSTS = ['158.160.8.42', '127.0.0.1', 'localhost', 'kittygrammm.zapto.org', 'taski.zapto.org']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -54,14 +55,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'backend.wsgi.application'
 
-sentry_sdk.init(
-    dsn="https://65b89a7da892a38627398f1fff6e6a0b@o4505874017615872.ingest.sentry.io/4505874021548032",
-    integrations=[
-        DjangoIntegration(),
-    ],
-    traces_sample_rate=1.0,
-    send_default_pii=True
-)
+
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
